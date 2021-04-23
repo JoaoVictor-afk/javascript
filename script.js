@@ -15,16 +15,37 @@ alert("Hello World");
 
 console.log("ola mundo");
 
-var a = 5;
+var c = "5";
+var d = 5;
+var e = d + parseInt(c);
 
-var b = 20;
+var idade = 14;
 
-++a;
+var b = idade <= 10;
 
-var c = a + b;
+var a = idade >= 60;
 
-a -= b;
+var go = b || a;
 
-console.log(1 + 1);
+console.log("maior que 60", a);
 
-console.log(a);
+console.log("Menor que 10", b);
+
+console.log("idade", idade);
+
+console.log("tem direito a gratuidade?", go);
+
+console.log(e);
+
+var idade = parseFloat(prompt("Digite a sua idade"));
+
+if (idade >= 19 && idade <= 70) {
+	console.log("pode");
+	console.log("qual o seu pedido?");
+} else if (idade >= 18) {
+	console.log("pode");
+	console.log("mostre a sua indentidade");
+} else {
+	console.log("Não pode");
+	console.log("Volte futuramente");
+}
