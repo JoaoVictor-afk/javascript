@@ -6,10 +6,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="">
     <title>Document</title>
+
+    <style>
+        img{
+            width: 200px;
+            margin-bottom: 25px;
+        }
+        div{
+            display: inline-block;
+            padding: 20px;
+            font-size: 2rem;
+            background-color: blueviolet;
+            color: white;
+       }
+    </style>
 </head>
-<body>
-    Hello World
+<body onload="console.log('pagina completamente carregada')">
     <script src="script.js"></script>
+
+    <h1 onclick="h1click()">Clique em mim</h1>
+    
+    <input id="texto" type="text" oninput="changeh1(this)">
+    
+    <img src="../Screenshot_8.png" alt="">
+    <br>
+    <div onclick="hideh1()" onmouseover="over(this)" onmouseout="onout(this)">Click</div>
+
 </body>
 </html>
-<!--this is a comment -->
+<!--this is a comment --> 
