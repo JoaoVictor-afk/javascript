@@ -19,3 +19,9 @@ turma.forEach(function (turma) {
 	console.log(turma.nome);
 	console.log(turma.media());
 });
+var d = new Date();
+console.log(d);
+console.log(d.getDate());
+console.log(d.getDay());
+
+
