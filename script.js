@@ -1,79 +1,50 @@
-alert("Hello World");
+function criarAluno(nome, n1, n2) {
+	return {
+		nome: nome,
+		nota: n1,
+		nota2: n2,
 
-console.log("ola mundo");
-
-var c = "5";
-
-var d = 5;
-
-var e = d + parseInt(c);
-
-var idade = 14;
-
-var b = idade <= 10;
-
-var a = idade >= 60;
-
-var go = b || a;
-
-console.log("maior que 60", a);
-
-console.log("Menor que 10", b);
-
-console.log("idade", idade);
-
-console.log("tem direito a gratuidade?", go);
-
-console.log(e);
-
-var idade = parseFloat(prompt("Digite a sua idade"));
-
-idade >= 18 ? console.log("Pode") : console.log("Não Pode");
-
-var pode = idade >= 18 ? true : false;
-
-console.log(pode);
-
-if (idade >= 19 && idade <= 70) {
-	console.log("pode");
-	console.log("qual o seu pedido?");
-} else if (idade >= 18) {
-	console.log("pode");
-	console.log("mostre a sua indentidade");
-} else {
-	console.log("Não pode");
-	console.log("Volte futuramente");
+		media: function () {
+			return (this.nota + this.nota2) / 2;
+		},
+	};
 }
-var nota1 = 6;
+var turma = [
+	criarAluno("Vitor", 9, 1),
+	criarAluno("Luisa", 10, 8),
+	criarAluno("João", 8, 7.5),
+];
 
-var nota2 = 5;
+turma.forEach(function (turma) {
+	console.log(turma.nome);
+	console.log(turma.media());
+});
+var d = new Date();
+console.log(d);
+console.log(d.getDate());
+console.log(d.getDay());
 
-var media = (nota1 + nota2) / 2;
+var numero1 = 4;
+let numero2 = 5;
+const numero3 = 6;
 
-var conceito = "legal";
-
-if (media >= 8.5) {
-	conceito = "bom";
-} else if (media >= 6.5) {
-	conceito = "otimo";
-} else {
-	conceito = "regular";
+console.log(numero1);
+console.log(numero2);
+console.log(numero3);
+function h1click() {
+	console.log("executando função");
 }
-console.log(media);
-
-console.log(conceito);
-
-switch (conceito) {
-	case "bom":
-		console.log("Parabens vc esta muito bem");
-		break;
-	case "otimo":
-		console.log("Você esta quase perfeito");
-		break;
-	case "regular":
-		console.log("Estude mais um pouco");
-		break;
-	default:
-		console.log("Houve algum erro");
-		break;
+function changeh1(i) {
+	let h1 = document.getElementsByTagName("h1")[0];
+	h1.innerText = i.value;
+}
+function hideh1() {
+	let h1 = document.getElementsByTagName("h1")[0];
+	h1.style.display = "none";
+}
+function over(Elemento) {
+	Elemento.style.backgroundColor = "blue";
+}
+function onout(Elemento) {
+	Elemento.style.backgroundColor = "blueviolet";
 }
