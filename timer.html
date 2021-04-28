@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="">
+    <title>Document</title>
+
+  
+    <script>
+        var numero=0;
+        
+        var interval;
+         function parar(){
+             clearInterval(interval)
+         }
+        function mudar(){
+            let h = document.getElementsByTagName("h2")[0]
+            h.innerHTML += " " + numero
+            numero++
+        }
+        function mudartexto(){
+           
+            interval=setInterval(mudar, 3000)
+        }
+        
+        let pessoas=["Igor","Jose", "Alice", "Nicole","Aluisio"]
+        
+        function sortear(){
+            let np= pessoas.length
+            
+            let ns= Math.floor(Math.random()*np)
+            
+            document.getElementById("d").innerHTML=pessoas[ns]
+        }
+
+    </script>
+    <style>
+        button{
+            background-color: black;
+            padding: 10px;
+            border-radius: 20px;
+            color: white;
+            border:none;
+            font-size: 1.2rem;
+            border: 30px solid none;
+            margin: 10px;
+            width: 100px;
+            
+
+        }
+        button:hover{
+            background-color:darkgray;
+            color: black;
+        }
+    </style>
+</head>
+<body onload="console.log('pagina completamente carregada')">
+    
+    <script src="script.js"></script>
+    
+    <h1 id="d"></h1>
+    
+    
+    <button onclick="sortear()">Sortear</button>
+    <br>
+    <h2>Titulo</h2>
+    
+    <input onclick="mudartexto()" type="submit" value="iniciar">
+    <input type="submit" onclick="parar()" value="parar">
+    
+   
+
+</body>
+</html>
+<!--this is a comment --> 
