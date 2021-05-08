@@ -1,2 +1,2 @@
 # Javascript
-algumas coisas iniciais no javascript
+algumas coisas iniciais no javascript.
